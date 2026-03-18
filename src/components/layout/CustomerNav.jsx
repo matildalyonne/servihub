@@ -13,9 +13,9 @@ export default function CustomerNav() {
   const { pathname } = useLocation()
 
   return (
-    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-white border-t border-stone-100 flex z-50">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg bg-white border-t border-stone-100 flex z-50">
       {tabs.map(({ label, icon: Icon, path }) => {
-        const active = pathname.startsWith(path)
+        const active = pathname === path || (path !== '/home' && pathname.startsWith(path))
         return (
           <button
             key={path}
