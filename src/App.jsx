@@ -24,6 +24,7 @@ import AdminLogin from './pages/admin/Login'
 import AdminDashboard from './pages/admin/Dashboard'
 import AdminWorkers from './pages/admin/Workers'
 import AdminRequests from './pages/admin/Requests'
+import AdminSignup from './pages/admin/Signup'
 
 function ProtectedRoute({ children, allowedRole }) {
   const { session, role, loading } = useAuth()
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/admin/dashboard" element={<ProtectedRoute allowedRole="admin"><AdminDashboard /></ProtectedRoute>} />
           <Route path="/admin/workers" element={<ProtectedRoute allowedRole="admin"><AdminWorkers /></ProtectedRoute>} />
           <Route path="/admin/requests" element={<ProtectedRoute allowedRole="admin"><AdminRequests /></ProtectedRoute>} />
+          <Route path="/admin/signup" element={<AdminSignup />} />
 
           {/* Catch-all */}
           <Route path="*" element={<Navigate to="/" replace />} />
