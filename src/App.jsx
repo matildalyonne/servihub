@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 
 // Public
 import Landing from './pages/Landing'
+import ResetPassword from './pages/ResetPassword'
 
 // Customer
 import CustomerLogin from './pages/customer/Login'
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<CustomerLogin />} />
           <Route path="/signup" element={<CustomerSignup />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
           {/* Customer */}
           <Route path="/home" element={<ProtectedRoute allowedRole="customer"><CustomerDashboard /></ProtectedRoute>} />
