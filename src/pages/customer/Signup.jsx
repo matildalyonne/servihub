@@ -20,23 +20,13 @@ export default function CustomerSignup() {
     if (form.password.length < 6) { setError('Password must be at least 6 characters.'); return }
     setLoading(true)
 
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email: form.email,
       password: form.password,
-      options: { data: { full_name: form.name } },
+      options: { data: { full_name: form.name, role: 'customer' } },
     })
 
     if (error) { setError(error.message); setLoading(false); return }
-
-    // Insert profile with role=customer
-    if (data.user) {
-      await supabase.from('profiles').insert({
-        id: data.user.id,
-        full_name: form.name,
-        email: form.email,
-        role: 'customer',
-      })
-    }
 
     navigate('/home')
   }
