@@ -37,7 +37,7 @@ export default function Landing() {
         </button>
       </div>
 
-      <p className="mt-12 text-stone-600 text-xs">© 2024 ServiHub. All rights reserved.</p>
+      <p className="mt-12 text-stone-600 text-xs">© 2026 ServiHub. All rights reserved.</p>
     </div>
   )
 }
