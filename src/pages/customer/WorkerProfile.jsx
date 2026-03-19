@@ -148,12 +148,8 @@ export default function WorkerProfile() {
       </div>
 
       {/* Sticky footer */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-white border-t border-stone-100 px-5 py-4 flex items-center justify-between gap-4">
-        <div>
-          <p className="text-xs text-stone-400 uppercase tracking-wider font-semibold">Estimated Rate</p>
-          <p className="font-display font-extrabold text-xl text-stone-900">${worker.hourly_rate || 45}<span className="text-sm font-normal text-stone-400">/hr</span></p>
-        </div>
-        <button onClick={() => navigate('/book')} className="flex-1 btn-primary py-3">
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg bg-white border-t border-stone-100 px-5 py-4">
+        <button onClick={() => navigate('/book')} className="btn-primary py-3.5">
           Book Now 📅
         </button>
       </div>

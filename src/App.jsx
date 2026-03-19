@@ -21,6 +21,7 @@ import WorkerLogin from './pages/worker/Login'
 import WorkerDashboard from './pages/worker/Dashboard'
 import WorkerEarnings from './pages/worker/Earnings'
 import WorkerHistory from './pages/worker/History'
+import WorkerProfile from './pages/worker/Profile'
 
 // Admin
 import AdminLogin from './pages/admin/Login'
@@ -68,6 +69,7 @@ export default function App() {
           <Route path="/worker/dashboard" element={<ProtectedRoute allowedRole="worker"><WorkerDashboard /></ProtectedRoute>} />
           <Route path="/worker/earnings" element={<ProtectedRoute allowedRole="worker"><WorkerEarnings /></ProtectedRoute>} />
           <Route path="/worker/history" element={<ProtectedRoute allowedRole="worker"><WorkerHistory /></ProtectedRoute>} />
+          <Route path="/worker/profile" element={<ProtectedRoute allowedRole="worker"><WorkerProfile /></ProtectedRoute>} />
 
           {/* Admin — secret routes */}
           <Route path="/admin" element={<AdminLogin />} />
