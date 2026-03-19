@@ -11,7 +11,7 @@ import CustomerSignup from './pages/customer/Signup'
 import CustomerDashboard from './pages/customer/Dashboard'
 import BookService from './pages/customer/BookService'
 import BookingConfirmed from './pages/customer/BookingConfirmed'
-import WorkerProfile from './pages/customer/WorkerProfile'
+import WorkerProfileView from './pages/customer/WorkerProfile'
 import CustomerBookings from './pages/customer/Bookings'
 import CustomerWorkers from './pages/customer/Workers'
 import CustomerProfile from './pages/customer/Profile'
@@ -62,7 +62,7 @@ export default function App() {
           <Route path="/bookings" element={<ProtectedRoute allowedRole="customer"><CustomerBookings /></ProtectedRoute>} />
           <Route path="/workers" element={<ProtectedRoute allowedRole="customer"><CustomerWorkers /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute allowedRole="customer"><CustomerProfile /></ProtectedRoute>} />
-          <Route path="/workers/:id" element={<ProtectedRoute allowedRole="customer"><WorkerProfile /></ProtectedRoute>} />
+          <Route path="/workers/:id" element={<ProtectedRoute allowedRole="customer"><WorkerProfileView /></ProtectedRoute>} />
 
           {/* Worker */}
           <Route path="/worker/login" element={<WorkerLogin />} />
